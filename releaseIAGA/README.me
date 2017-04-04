@@ -1,0 +1,9 @@
+releaseIAGA文件夹为解析IAGA-2002 文件格式。在安装好Python、mongodb、pymongo等相关环境后（可以下载robomongo直观监测数据库的变化）.
+在命令行输入“sudo service mongod start”启动数据库，通过robomongo客户端连接至数据库；
+运行mongo.py文件，编译器显示“Well Done！”说明运行成功，同时在robomongo中可以看见新插入的数据；
+目前只完成了IAGA-2002即：.min,.sec文件的解析，正在尝试编写消息队列与爬虫连接，解析CDF文件还在进行中。
+
+format_iaga02_03.py:解析文件
+kou20170319vmin.min:文件
+mongo.py:数据库服务
+settings.py:数据库名、集合名、路径、端口等配置（还未配置）
