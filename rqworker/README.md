@@ -1,0 +1,7 @@
+rqworker文件夹下包含两个爬虫所生产的消息的消费者定义
+
+intermagnet_worker.py文件为爬虫intermag的消费者，从消息队列接收到爬虫消息之后，从数据库中读取文件并写入到一个本地临时文件夹下，
+之后对文件进行解压缩，解压缩后将删除临时的zip文件对于解压后的文件，保存在与压缩文件同名的文件夹下，若解压文件中包含压缩文件，则对文件进行二次解压，并把压缩文件删除
+对于解压出的目标文件，将读取其文件内容（未解析）并存入mongoDB中
+nasacdf_worker.py文件为爬虫nasacdf的消费者。
+以上两个文件需要cd到rqworker文件夹下，输入python intermagnet_worker.py/nasacdf_worker.py命令即可运行
