@@ -1,4 +1,0 @@
-# intermagnet
-# intermagnet
-# intermagnet
-# intermagnet
