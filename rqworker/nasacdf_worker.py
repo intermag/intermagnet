@@ -3,8 +3,7 @@ import pika
 import time
 import json
 
-connection = pika.BlockingConnection(pika.ConnectionParameters(
-        host='localhost'))
+connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
 channel = connection.channel()
 
 channel.queue_declare(queue='nasacdf_task_queue', durable=True)
